@@ -158,7 +158,7 @@ def draw(node,length,level,yu,button):
 
 turtle.hideturtle()     #隐藏turtle
 turtle.speed(0);        #设置画笔移动的速度，0-10 值越小速度越快
-turtle.tracer(0,1)      #设置动画的开关和延迟，均为0
+#turtle.tracer(0,1)      #设置动画的开关和延迟，均为0
 turtle.penup()          #抬起画笔
 turtle.left(90)         #默认方向为朝x轴的正方向，左转90度则朝上
 turtle.backward(300)#设置turtle的位置，朝下移动300
