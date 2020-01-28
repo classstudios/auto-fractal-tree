@@ -2,7 +2,7 @@ import turtle
 import random
 from math import *
 
-def Fibonacci_Recursion_tool(n):
+def Fibonacci_Recursion_tool(n):  #
     if n <= 0:
         return 0
     elif n == 1:
@@ -11,14 +11,14 @@ def Fibonacci_Recursion_tool(n):
         return Fibonacci_Recursion_tool(n - 1) + Fibonacci_Recursion_tool(n - 2)
 
 
-def Fibonacci_Recursion(n):
+def Fibonacci_Recursion(n):     #
     result_list = []
     for i in range(1, n + 3):
         result_list.append(Fibonacci_Recursion_tool(i))
     return result_list
 
 
-def leaf(x,y,node):#在(x,y)处画爱心lalala
+def leaf(x,y,node):#
     til=turtle.heading()
     i= random.random()
     an = random.randint(10,180)
@@ -53,7 +53,7 @@ def draw(node,length,level,yu,button):
     t = cos(radians(turtle.heading()+5)) / 8 + 0.25
     turtle.pencolor(t*1.6, t*1.2, t*1.4)
     #turtle.pencolor("gray")
-    turtle.pensize(node/1.2)
+    turtle.pensize(node/1.2)        
     x = random.randint(0, 10)
     #turtle.forward(length)  # 画树枝
     #yu[level] = yu[level] - 1
@@ -91,7 +91,7 @@ def draw(node,length,level,yu,button):
         turtle.forward(length)
         #leaf(turtle.xcor(),turtle.ycor())# jump
 
-    elif level>3 and (x==8 or x==3) :
+    elif level>3 and (x>6) :
         turtle.pendown()
         turtle.forward(length)
         c = random.randint(4, 6)
@@ -158,11 +158,11 @@ def draw(node,length,level,yu,button):
 
 turtle.hideturtle()     #隐藏turtle
 turtle.speed(0);        #设置画笔移动的速度，0-10 值越小速度越快
-#turtle.tracer(0,1)      #设置动画的开关和延迟，均为0
+#turtle.tracer(0,0)      #设置动画的开关和延迟，均为0
 turtle.penup()          #抬起画笔
 turtle.left(90)         #默认方向为朝x轴的正方向，左转90度则朝上
 turtle.backward(300)#设置turtle的位置，朝下移动300
-top=14
+top=9
 yu=Fibonacci_Recursion(top)
 yu.remove(yu[0])
 print(yu)
